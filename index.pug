@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="css/styles.css")
+        title pixel perfect design resources
+    body
+        .banner: .wrapper
+            h1 Pixel Perfect
+                br
+                |Design Resources
+        nav: .wrapper
+            a(href="#") Popular
+            a(href="#") Recent
+            label(for="search") Search
+            input(type="search" id="search" placeholder="iPhone 6+ template")
+        ul.resources
+            li.resource
+                img(src="https://source.unsplash.com/random", alt="")
+                .resource__info
+                    h2 Example Resource
+                    a(href="#").btn View Resource
+                    p.price $22
+            li.resource: img(src="https://source.unsplash.com/random", alt="")
+            li.resource: img(src="https://source.unsplash.com/random", alt="")
+            li.resource: img(src="https://source.unsplash.com/random", alt="")
+            li.resource: img(src="https://source.unsplash.com/random", alt="")
+            li.resource: img(src="https://source.unsplash.com/random", alt="")
