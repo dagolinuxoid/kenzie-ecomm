@@ -1,5 +1,7 @@
 window.onload = () => {
-   const resource = document.querySelector('.resource');
-   const resourceInfo = document.querySelector('.resource__info');
-   resource.addEventListener('click', () => resourceInfo.classList.toggle('show-board-js'));
+   const resource = document.querySelectorAll('.resource');
+   const resourceInfo = document.querySelectorAll('.resource__info');
+   [...resource].forEach((card,i) => {
+       card.addEventListener('click', () => resourceInfo[i].classList.toggle('show-board-js'));
+   });
 };
