@@ -1,7 +1,7 @@
 window.onload = () => {
-   const resource = document.querySelectorAll('.resource');
-   const resourceInfo = document.querySelectorAll('.resource__info');
-   [...resource].forEach((card,i) => {
-       card.addEventListener('click', () => resourceInfo[i].classList.toggle('show-board-js'));
+   const resources = document.querySelectorAll('.resource');
+   const resourcesInfo = document.querySelectorAll('.resource__info');
+   [...resources].forEach((resource, i) => {
+       resource.addEventListener('click', () => resourcesInfo[i].classList.toggle('js-show-info'));
    });
 };

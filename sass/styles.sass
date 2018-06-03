@@ -2,10 +2,11 @@
     box-sizing: border-box
 
 $main: #222
-$secondary: darkgrey
+$secondary: #2a2a2a
 $white: #fff
-$highlight: darkgreen
+$highlight: pink
 $black: #000
+$darkish: #111
 
 html,body
     margin: 0
@@ -19,7 +20,7 @@ ul
 img
     width: 100%
     max-width: 100%
-    height: 200px
+    min-height: 100% 
 
 .banner
     background: $main
@@ -49,7 +50,7 @@ nav
         &:hover
             color: $highlight
     label
-        border-right: 1px solid $black
+        border-right: 2px solid $black
         padding-right: 1em
     input[type="search"]
         outline: none
@@ -62,37 +63,41 @@ nav
         padding: 1em
     
 .resources
-    img
-        vertical-align: middle
+    padding-top: 1px
+    display: flex
+    flex-wrap: wrap
 
 .resource
+    display: block
     width: 25%
-    float: left
     position: relative
+    height: 200px
+    overflow: hidden
+    border: 2px solid $white
     &__info
         position: absolute
-        background: rgba($highlight, .55)
+        background: transparentize($highlight, .3)
         padding: 2em
         top: 0
         bottom: 0
         width: 100%
-        transition: transform .3s ease-in-out
         transform: translateX(-100%)
-        opacity: 0
-        &.show-board-js
-            opacity: 1
+        transition: transform .3s ease-in-out
+        &.js-show-info
             transform: translateX(0)
         h2
             font-size: 1.5em
+            font-weight: 700
             color: $white
             line-height: 1
             text-transform: uppercase
         .btn
-            border: 1px solid $white
+            border: 2px solid $white
             padding: .5em 1em
             color: $white
             text-decoration: none
             border-radius: .3em
+            background-color: transparentize($darkish, .7)
         p
             display: inline-block
             margin-left: 1em
